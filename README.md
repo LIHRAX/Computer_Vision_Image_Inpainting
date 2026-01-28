@@ -31,9 +31,9 @@ The network takes a 4-channel input (RGB Image + 1-channel Mask).
 
 ### 2. Loss Function
 The model is trained using a composite loss function:
-\[
-\mathcal{L}_{\text{total}} = \lambda_1 \mathcal{L}_{\text{L1}} + \lambda_2 \mathcal{L}_{\text{perceptual}}
-\]
+
+$$\mathcal{L}_{total} = \lambda_1 \mathcal{L}_{\text{L1}} + \lambda_2 \mathcal{L}_{\text{perceptual}}$$
+
 * **L1 Loss:** Minimizes the pixel-wise difference between the output and ground truth.
 * **Perceptual Loss:** Computes the Euclidean distance between feature maps extracted from a frozen VGG16 network, ensuring the *style* and *texture* match the original image.
 
