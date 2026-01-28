@@ -7,7 +7,7 @@
 
 A computer vision project that reconstructs missing regions in landscape images using a custom **Attention U-Net** architecture. This repository contains the complete training pipeline and an interactive Flask web application for real-time inference.
 
-![Inpainting Results](assets/image_7b31b6.jpg)
+![Inpainting Results](assets/visualization.png)
 *Figure 1: Model performance on the validation set. Columns: Masked Input, Binary Mask, Model Output, Ground Truth.*
 
 ## Project Overview
@@ -45,7 +45,7 @@ To prevent the model from overfitting to a fixed hole shape or position, masks a
 2. **Mask:** A randomly generated binary mask (white rectangle indicates the missing area).
 3. **Masked Input:** The input fed to the network, where the masked region is zeroed out.
 
-![Data Preprocessing](assets/image_7b2652.jpg)
+![Data Preprocessing](assets/sample_inpainting.png)
 *Figure 2: The Training Triplet. The network receives the **Masked Image** (Right) and the **Mask** (Center) as inputs and attempts to reconstruct the **Original Image** (Left).*
 
 ### Author
